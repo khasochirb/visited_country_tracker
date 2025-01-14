@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensures the content fits the full viewport height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.ag-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%; /* Map area height */
+  position: relative;
+  overflow: hidden; /* Prevents content overflow */
+  background-color: #fff;
+  border: 2px solid #383d46; /* Adds a border for better visibility */
+}
+
+.ag-canvas_svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1000px; /* Optional max-width for better scaling */
+  max-height: 100%; /* Optional max-height for better scaling */
+}
+
+form.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+input {
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  outline: none;
+  background: #fff5e6; /* Light yellow for paper-like feel */
+  border: 2px dashed #000;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 30%; /* Adjust width for responsiveness */
+}
+
+button {
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  background-color: #ff6f61;
+  border: 2px dashed #383d46;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ffcc00;
+  color: #383d46;
+}
+
+path {
+  fill: #fff; /* Default white background */
+  stroke: #000; /* Black stroke for a coloring effect */
+  stroke-width: 0.5px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+path.visited {
+  fill: #ffcc00; /* Highlight visited countries with yellow */
+}
+
+path:hover {
+  fill: #ff6f61; /* Change to a playful orange on hover */
+}
+.instruction {
+  display: flex;
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  color: #383d46;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.total-count {
+  display: flex;
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  color: #ff6f61;
+  margin-top: 10px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+#hover-info {
+  position: absolute;
+  background-color: #fff5e6; /* Light yellow for paper-like feel */
+  border: 2px dashed #000; /* Dashed border for hand-drawn style */
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  font-size: 14px;
+  z-index: 1000;
+  max-width: 80%; /* Prevent tooltip from going off-screen */
+  word-wrap: break-word; /* Break long text */
+}
+
+
+
+/* Smaller Tab Styles */
+.tab-view {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 0;
+  text-align: left;
+}
+
+.tab-view > input {
+  position: absolute;
+  display: none;
+}
+
+.tab-view > label {
+  position: relative;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 5px 10px; /* Smaller padding for tabs */
+  background: #e5e5e5;
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  font-size: 12px; /* Smaller font size for tabs */
+  line-height: 30px; /* Reduced line height */
+  border-radius: 5px; /* Reduced border-radius for tabs */
+  border: 2px dashed #383d46;
+  cursor: pointer;
+  transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.tab-view > label:hover {
+  background: #f2f2f2;
+}
+
+.tab-view > input:checked + label {
+  background: #fff;
+  border-color: #ff6f61; /* Highlight active tab */
+}
+
+.tab-view > ul {
+  list-style: none;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 13px;
+  background: #fff;
+  text-align: left;
+  border: 2px dashed #383d46; /* Matches the playful style */
+  border-radius: 10px; /* Rounded edges for the content box */
+}
+
+.tab-view > ul > li {
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  padding: 20px 30px; /* Smaller padding inside content */
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.tab-view > .tab-content-first:checked ~ ul .tab-content-first,
+.tab-view > .tab-content-2:checked ~ ul .tab-content-2,
+.tab-view > .tab-content-3:checked ~ ul .tab-content-3 {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.spacer {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .tab-view > label {
+    margin: 5px;
+    font-size: 10px; /* Even smaller font size on small screens */
+    padding: 5px;
+  }
+
+  .tab-view > ul {
+    font-size: 12px;
+  }
+
+  #hover-info {
+    font-size: 12px; /* Smaller font for mobile */
+    padding: 5px; /* Reduce padding */
+}
+}

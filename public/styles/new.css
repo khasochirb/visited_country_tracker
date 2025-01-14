@@ -1,0 +1,145 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #fffaf0; /* Pastel beige background */
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label span {
+  transform: scale(1.25);
+  transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked + label span.red {
+  border: 2px solid #dcbaba; /* Pastel red border */
+}
+
+input[type="radio"]:checked + label span.orange {
+  border: 2px solid #e7c1a1; /* Pastel orange border */
+}
+
+input[type="radio"]:checked + label span.yellow {
+  border: 2px solid #e8d4a0; /* Pastel yellow border */
+}
+
+input[type="radio"]:checked + label span.olive {
+  border: 2px solid #cdd7a1; /* Pastel olive border */
+}
+
+input[type="radio"]:checked + label span.green {
+  border: 2px solid #b6d2b3; /* Pastel green border */
+}
+
+input[type="radio"]:checked + label span.teal {
+  border: 2px solid #a8d4d0; /* Pastel teal border */
+}
+
+input[type="radio"]:checked + label span.blue {
+  border: 2px solid #b2d2e8; /* Pastel blue border */
+}
+
+input[type="radio"]:checked + label span.violet {
+  border: 2px solid #c6b8dc; /* Pastel violet border */
+}
+
+input[type="radio"]:checked + label span.purple {
+  border: 2px solid #d3b6d9; /* Pastel purple border */
+}
+
+input[type="radio"]:checked + label span.pink {
+  border: 2px solid #e8b4cb; /* Pastel pink border */
+}
+
+label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+label:hover span {
+  transform: scale(1.25);
+}
+
+label span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+label span.red {
+  background: #f4cccc; /* Pastel red */
+}
+
+label span.orange {
+  background: #f6d7c3; /* Pastel orange */
+}
+
+label span.yellow {
+  background: #f7e8be; /* Pastel yellow */
+}
+
+label span.olive {
+  background: #dce4be; /* Pastel olive */
+}
+
+label span.green {
+  background: #c9e7cc; /* Pastel green */
+}
+
+label span.teal {
+  background: #c1e8e5; /* Pastel teal */
+}
+
+label span.blue {
+  background: #c9e2f4; /* Pastel blue */
+}
+
+label span.violet {
+  background: #d8cbee; /* Pastel violet */
+}
+
+label span.purple {
+  background: #e3caeb; /* Pastel purple */
+}
+
+label span.pink {
+  background: #f8c7db; /* Pastel pink */
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  label {
+    margin: 5px;
+  }
+}
