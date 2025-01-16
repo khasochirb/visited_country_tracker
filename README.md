@@ -1,7 +1,5 @@
 # Visited Country Tracker
 
-![Visited Country Tracker](https://via.placeholder.com/800x300.png?text=Visited+Country+Tracker)
-
 A simple and interactive web application for tracking the countries you've visited. Visualize your travel history and share your wanderlust journey with others!
 
 ---
