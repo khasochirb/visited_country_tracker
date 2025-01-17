@@ -107,7 +107,3 @@ For any questions, feel free to reach out:
 - **Author:** Khas-Ochir Bayarjargal
 - **Email:** [khas.bayarjargal@gmail.com](mailto:khas.bayarjargal@gmail.com)
 - **GitHub:** [github.com/khasochirb](https://github.com/khasochirb)
-
----
-
-Enjoy tracking your travels and inspiring others to explore the world! 🌍
