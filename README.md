@@ -1,9 +1,5 @@
 # Visited Country Tracker
 
-A simple and interactive web application for tracking the countries you've visited. Visualize your travel history and share your wanderlust journey with others!
-
----
-
 ## Features
 
 - **Interactive Map:** Add countries to your visited list and see them highlighted on a world map.
